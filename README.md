@@ -9,18 +9,17 @@ O QUE APRENDI?
     Criei o componente Transform, para determina a Posição, Rotação e Escala do veiculo;
     Criei o componente Translate, para definir a posição de um objeto de jogo ou mover um objeto;
     Criei o componente Rotate, para girar o veiculo;
-.
-    Programado o script para ser posivel dirigir o veiculo pela estrada;
+    Programei o script para ser posivel dirigir o veiculo pela estrada;
 
 
-JOGO : https://alfredo1995.github.io/simulador-direcao-unity/
+JOGO RODANDO EM: https://alfredo1995.github.io/simulador-direcao-unity/
 
 
-faça o downloado do prototype 
+Primeiro passo, faça o downloado do prototype 
 
     https://connect-prd-cdn.unity.com/20210923/c709e76b-3e93-4140-8675-f694b9f04399/Prototype%201%20-%20Starter%20Files.zip
     
- Iniciando Projeto
+Iniciando Projeto
     
     1) No desktop, clique com o botão direito do mouse > criar uma nova pasta, em seguida,  "nomeie-o a pasta";
 
