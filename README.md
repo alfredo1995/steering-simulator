@@ -1,4 +1,16 @@
-Aprendendo os fundamentos para criação de Jogos com unity através da linguagem C# / Projetos Realizado na plataforma learn.unity
+Aprendendo os fundamentos para criação de Jogos com C# na unity através da plataforma learn.unity
+
+O QUE APRENDI?
+
+    Usar o Empyty GameObjects para organizar os objectos;
+    Usar o inputManager para obter a entrada do nosso veiculo, assim quando for precisonado as teclas do teclado correspondende as posiçoes;
+    Componente Transform, para determina a Posição, Rotação e Escala do veiculo;
+    Componente Translate, para definir a posição de um objeto de jogo ou mover um objeto;
+    Componente Rotate, para girar o veiculo;
+    Criaros GameObjetos para representam personagens, adereços e cenários.
+    Para que um GameObject se torne algo e necessário conceder propriedades, o que é feito com a adição de componentes.
+    Programado o script para ser posivel dirigir o veiculo pela estrada;
+
 
 JOGO : https://alfredo1995.github.io/simulador-direcao/
 
