@@ -8,7 +8,7 @@ O QUE APRENDI?
     Programei o script para ser posivel dirigir o veiculo pela estrada;
     Usei o inputManager para obter a entrada do nosso veiculo, assim quando for precisonado as teclas do teclado correspondende as posiçoes;
     Criei o componente Transform, para determina a Posição, Rotação e Escala do veiculo;
-    Criei o componente Translate, para definir a posição de um objeto de jogo ou mover um objeto;
+    Criei o componente Translate, para definir a posição ou mover um objeto;
     Criei o componente Rotate, para girar o veiculo;
 
 
