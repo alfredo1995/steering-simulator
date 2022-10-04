@@ -5,11 +5,11 @@ O QUE APRENDI?
     Usei o Empyty GameObjects para organizar os objectos;
     Criei GameObjetos para representam personagens, adereços e cenários.
     Para que um GameObject se torne algo e necessário conceder propriedades, o que é feito com a adição de componentes
+    Programei o script para ser posivel dirigir o veiculo pela estrada;
     Usei o inputManager para obter a entrada do nosso veiculo, assim quando for precisonado as teclas do teclado correspondende as posiçoes;
     Criei o componente Transform, para determina a Posição, Rotação e Escala do veiculo;
     Criei o componente Translate, para definir a posição de um objeto de jogo ou mover um objeto;
     Criei o componente Rotate, para girar o veiculo;
-    Programei o script para ser posivel dirigir o veiculo pela estrada;
 
 
 JOGO RODANDO EM: https://alfredo1995.github.io/simulador-direcao-unity/
