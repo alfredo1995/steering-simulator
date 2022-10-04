@@ -2,13 +2,14 @@ Aprendendo os fundamentos para criação de Jogos com C# na unity através da pl
 
 O QUE APRENDI?
 
-    Usar o Empyty GameObjects para organizar os objectos;
-    Usar o inputManager para obter a entrada do nosso veiculo, assim quando for precisonado as teclas do teclado correspondende as posiçoes;
-    Componente Transform, para determina a Posição, Rotação e Escala do veiculo;
-    Componente Translate, para definir a posição de um objeto de jogo ou mover um objeto;
-    Componente Rotate, para girar o veiculo;
-    Criaros GameObjetos para representam personagens, adereços e cenários.
-    Para que um GameObject se torne algo e necessário conceder propriedades, o que é feito com a adição de componentes.
+    Usei o Empyty GameObjects para organizar os objectos;
+    Usei o inputManager para obter a entrada do nosso veiculo, assim quando for precisonado as teclas do teclado correspondende as posiçoes;
+    Criei GameObjetos para representam personagens, adereços e cenários.
+    Para que um GameObject se torne algo e necessário conceder propriedades, o que é feito com a adição de componentes
+    Criei o componente Transform, para determina a Posição, Rotação e Escala do veiculo;
+    Criei o componente Translate, para definir a posição de um objeto de jogo ou mover um objeto;
+    Criei o componente Rotate, para girar o veiculo;
+.
     Programado o script para ser posivel dirigir o veiculo pela estrada;
 
 
