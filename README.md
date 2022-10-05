@@ -1,6 +1,6 @@
 Aprendendo os fundamentos para criação de Jogos com C# na unity através da plataforma learn.unity
 
-O QUE APRENDI?
+Jogo publicado: https://alfredo1995.github.io/simulador-direcao-unity
 
     Usei o Empyty GameObjects para organizar os objectos;
     Criei GameObjetos para representam personagens, adereços e cenários.
@@ -11,9 +11,7 @@ O QUE APRENDI?
     Criei o componente Translate, para definir a posição ou mover um objeto;
     Criei o componente Rotate, para girar o veiculo;
 
-
-Jogo publicado: https://alfredo1995.github.io/simulador-direcao-unity/
-
+<br>
 
 Primeiro passo, faça o downloado do prototype 
 
