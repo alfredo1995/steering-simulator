@@ -2,6 +2,8 @@ Aprendendo os fundamentos para criação de Jogos com C# na unity através da pl
 
 Jogo publicado: https://alfredo1995.github.io/simulador-direcao-unity
 
+<br>
+
     Usei o Empyty GameObjects para organizar os objectos;
     Criei GameObjetos para representam personagens, adereços e cenários.
     GameObject se torne algo ao conceder propriedades, o que é feito com a adição de componentes
