@@ -12,7 +12,9 @@ O QUE APRENDI?
     Criei o componente Rotate, para girar o veiculo;
 
 
-Jogo publicado: https://alfredo1995.github.io/simulador-direcao-unity/
+Jogo publicado
+
+    https://alfredo1995.github.io/simulador-direcao-unity/
 
 
 Primeiro passo, faça o downloado do prototype 
