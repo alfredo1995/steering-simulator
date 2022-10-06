@@ -21,7 +21,7 @@ Primeiro passo, faça o downloado do prototype
     
 Iniciando Projeto
     
-    1) No desktop, clique com o botão direito do mouse > criar uma nova pasta, em seguida,  "nomeie-o a pasta";
+    1) No desktop, clique com o botão direito do mouse > criar uma nova pasta, em seguida, "nomeie-o a pasta";
 
     2) Crie um novo projeto Unity usando o modelo 3D - lembre-se de usar uma das versões suportadas do Unity;
 
