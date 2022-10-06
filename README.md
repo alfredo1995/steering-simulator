@@ -5,10 +5,9 @@ Jogo publicado: https://alfredo1995.github.io/simulador-direcao-unity
 <br>
 
     Usei o Empyty GameObjects para organizar os objectos;
-    Criei GameObjetos para representam personagens, adereços e cenários.
-    GameObject se torne algo ao conceder propriedades, o que é feito com a adição de componentes
+    Criei GameObjetos p/ representa os personagens, adereços e cenários. adicionei componente p/ ele se transformar em algo
     Programei o script para ser posivel dirigir o veiculo pela estrada;
-    Usei o inputManager para obter a entrada do nosso veiculo, assim quando for precisonado as teclas do teclado correspondende as posiçoes;
+    Usei o inputManager para obter a entrada do veiculo, assim quando for precisonado as teclas ira executar a ação;
     Criei o componente Transform, para determina a Posição, Rotação e Escala do veiculo;
     Criei o componente Translate, para definir a posição ou mover um objeto;
     Criei o componente Rotate, para girar o veiculo;
