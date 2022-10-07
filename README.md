@@ -266,17 +266,9 @@ Faça o deslocamento em uma variável Vector3
 Deixe o veículo mover-se para a esquerda/direita
 
     0) Input e o sistema de entrada do unity, quando for precionado a seta para cima, você recebe um valor de entrada(+1);
-           Quando for preciosado a seta para baixo, você recebe um valor de entrada(-1);
-           Definimos o veiculo com a velocidade 10, entao vamos multiplicar a velocidade de entrada (speed # input);
-           A telca Up vai fazer o (speed * (+1)) dando + 10 = forwand ( move esse veiculo na direção positiva para frent);
-           A telca Down vai fazer o (speed * (-1)) dando - 10 = backwand ( move esse veiculo na direção negativa para trás);
-
-           Para girar o veiculo vamos mutilplicar a rotação * (+1)
-           Quando for preciosado a seta para direita, rotation * (+1) = move para direita;
-           Quando for preciosado a seta para esquerda, rotation * (-1) = move para esquerda;
-           
+           Quando for preciosado as setas, você recebe um valor de entrada de (+1) ou (-1) depedendo da direção;           
                 
-    1) No topo do PlayerController.cs, adicionar uma variável pública TurnSpeed para contralamos a movimentação do veiculo;
+    1) No topo do PlayerController.cs, adicione uma variável pública TurnSpeed para contralamos a movimentação do veiculo;
            
                 public class PlayerController : MonoBehaviour
 
@@ -284,16 +276,15 @@ Deixe o veículo mover-se para a esquerda/direita
                 {
                     public float speed = 10.0f;
                     public float turnSpeed;
-                }
+
             
-            
-    2.1) vamos acessar o componete de transformação do player para conseguimos obter a movimentação no metodo update;
+    2) vamos acessar o componete de transformação do player para conseguimos obter a movimentação no metodo update;
          
-    2.2) transform > acessar a posição; tranlate > modificar a moviementação; Vector3 > composto por 3 componentes "(x,y,z)"; .righ > move para direita; 
+    3) transform > acessar a posição; tranlate > modificar a moviementação; Vector3 > composto por 3 componentes "(x,y,z)"; e .righ para move; 
          
-    2.3) * Time.deltaTime > para atualizar essa posição ao longo do tempo em vez a cada frame(quadro);
+    4) * Time.deltaTime > para atualizar essa posição ao longo do tempo em vez a cada frame(quadro);
          
-    2.4) * turnSpeed > multiplicando pela variavel criada para acessar a movimentação; 
+    5) * turnSpeed > multiplicando pela variavel criada para acessar a movimentação; 
          
                 void Update()
                 {
@@ -305,7 +296,7 @@ Movimento base esquerda/direita na entrada
 
     1) No menu superior, clique em Editar > Configurações do Projeto, input manager >  fold-out dos Eixos para explorar as entradas;
     
-    2) No PlayerController.cs, adicione uma nova  variável de flutuação de flutuação pública horizontalInput para pegar o valor de entrada;
+    2) No PlayerController.cs, adicione uma nova  variável de flutuação pública "horizontalInput" p/ pegar o valor de entrada;
     
             public class PlayerController : MonoBehaviour
 
@@ -314,19 +305,15 @@ Movimento base esquerda/direita na entrada
                 public float turnSpeed;
                 public float horizontalInput;
     
-    3) Definir essa vaiavel no nosso projeto m Update, atribua horizontalInput = Input.GetAxis("Horizontal");
+    3) Definir essa vaiavel no metodo Update, atribuir o valor usando o gerenciado de entrada Input. > acessando o metodo de eixo GetAxis();    
     
-    3.1) vamos usar nossa variavel horizontalInput = atribuir o valor usando o gerenciado de entrada Input. > acessando o metodo de eixo GetAxis();
-    
-    3.2) GetAxis(nesse metodo informamos o eixo que sera usada)  GetAxis("Horizontal")  string literal;
-    
-    3.3) em Unity, em nosso input manager, o nome do nosso eixto é "Horizontal";
+    4) em Unity, em nosso input manager, o nome do nosso eixto é "Horizontal";
     
            void Update()
             {
                 horizontalInput = Input.GetAxis("Horizontal");
     
-    3.4) Adicionar a  variável horizontalInput ao método de translate para obter o controle do veículo multiplicado pelo speedTurn;
+    5) Adicionar a variável horizontalInput ao método translate para obter o controle do veículo multiplicado pelo speedTurn;
     
            void Update()
             {
@@ -335,7 +322,7 @@ Movimento base esquerda/direita na entrada
                 transform.Translate(Vector3.forward * Time.deltaTime * speed);
                 transform.Translate(Vector3.right * Time.deltaTime * turnSpeed * horizontalInput);
     
-    3.5) No Unity, No Veiculo Inspetor, edite as  variáveis turnSpeed e speed para ajustar a sensação de velocidade;
+    6) No Unity, No Veiculo Inspetor, edite os valores das variáveis turnSpeed e speed para ajustar a sensação de velocidade;
     
 Assuma o controle da velocidade do veículo
 
