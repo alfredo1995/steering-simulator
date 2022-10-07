@@ -1,17 +1,17 @@
-Aprendendo os fundamentos para criação de Jogos com C# na unity através da plataforma learn.unity
+Aprendendo os fundamentos para criação de Jogo em C# na unity através da plataforma learn.unity
 
 Jogo publicado: https://alfredo1995.github.io/simulador-direcao-unity
 
 <br>
 
-    Usei o Empyty GameObjects para organizar os objectos;
-    Criei GameObjetos p/ representa os personagens, adereços e cenários;
-    Adicionei componente aos gameobjetos p/ eles se transformaren em algo;
-    Programei o script para ser posivel dirigir o veiculo pela estrada;
-    Usei o inputManager para obter a entrada do veiculo, assim usaremo as teclas do teclado;
-    Criei o componente Transform, para determina a Posição, Rotação e Escala do veiculo;
-    Criei o componente Translate, para definir a posição ou mover um objeto;
-    Criei o componente Rotate, para girar o veiculo;
+    Empyty GameObjects pasta p/ organizar os objetos;
+    GameObjetos p/ representar os personagens, adereços e cenários;
+    Componente Script C# p/ transformar os GameObjetos em algo;
+    Progamando o Script p/ ser posivel dirigir o veiculo pela estrada;
+    InputManager p/ obter a entrada do veiculo, assim usar as teclas do teclado;
+    Componente Transform, para determina a Posição, Rotação e Escala do Veiculo(objeto);
+    Componente Translate, para definir a posição ou mover um objeto;
+    Componente Rotate, para girar o veiculo;
 
 <br>
 
