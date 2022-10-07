@@ -52,7 +52,7 @@ Adicione um obstáculo e reposicione-o
 
     1) Vá para a Biblioteca de Cursos > Obstáculos e arraste um obstáculo diretamente para a vista da cena;
 
-    2) No Inspetor para o seu obstáculo, no canto superior direito do componente Transformar, clique no botão mais opções > Redefinir a posição;: 
+    2) No Inspetor para o seu obstáculo, no canto superior direito do componente Transformar, clique no botão mais opções > Redefinir a posição;    
 
     3) No Inspetor, altere o Local XYZ para x=0, y=0, z=25;
 
@@ -60,51 +60,37 @@ Adicione um obstáculo e reposicione-o
 
 Localize sua câmera e execute o jogo
 
-    1) Selecione a câmera na hierarquia e pressione F para se concentrar nela;
-    
-    2) Pressione o botão Jogar para executar o seu jogo e pressione Play novamente para  pará-lo;
-    
-    3) Mova a câmera para trás do veículo;
+    1) Selecione a câmera na hierarquia e pressione F para se concentrar nela;    
 
-    4) Use as  ferramentas Move and Rotate para mover a câmera atrás do veículo olhando para baixo sobre ele;    
- 
-Personalize o layout da interface
+    2) Mova a câmera para trás do veículo;
 
-    1) No canto superior direito, altere o layout de "Padrão" para "Alto"; 
+    3) Use as  ferramentas Move and Rotate para mover a câmera atrás do veículo olhando para baixo sobre ele;   
     
-    2) Mova a visão do jogo abaixo da vista da cena;
-    
-    3) Na  janela Do Projeto, clique no menu suspenso no canto superior direito e escolha "Layout de uma coluna";
-    
-    4) No layout Dropdown, salve um novo Layout e chame de "Meu Layout";
-    
-Crie e aplique meu primeiro script
+Crie e aplique o primeiro script
  
-    0) Todos os GameObject são composto por componentes
+    0) Todos os GameObject são composto por componentes;
     
-    1) Na janela Do projeto, clique  com o botão > criar > pasta chamada "Scripts"
+    1) Na janela Do projeto, criei uma pasta chamada "Scripts"
     
     2) Na pasta "Scripts", clique com o botão direito do mouse > Criar >C# Script chamado "PlayerController" 
     
-    3) Arraste o novo script para o objeto Do veículo
+    3) Arraste o novo script para o objeto Do veículo;
     
-    4) Clique no objeto do veículo para ter certeza de que foi adicionado como um componente no Inspetor
+    4) Clique no objeto do veículo p/ ter certeza de que foi adicionado como um componente no Inspetor
     
 Dê ao veículo um movimento para a frente
 
-    1) clique duplo no script > alterar o componente de trasformação
+    1) clique duplo no script > Metodo update do objeto veiculo, alterar o componente de trasformação; 
     
-    2) Digite (adicionar 0, 0, 1 entre os parênteses e complete a linha com um ponto e vírgula (;)
-    
-    3) Pressione Ctrl/Cmd + S para salvar seu script e execute seu jogo para testá-lo
+    2) Digite (adicionar 0, 0, 1), representando os respectivos eixos (x, y, e z);
 
-Codigo para alterar o componente de trasnformação
 
-    void Update()
-    {
-        transform.Translate(0, 0, 1);
-    }
-    
+        void Update()
+        {
+            transform.Translate(0, 0, 1);
+        } 
+
+
 Debugando o codigo para alter o componente de trasnformação
     
     1) um "T" minusculo signigica que estamos recebendo um componente de trasformação / veiculo transform
