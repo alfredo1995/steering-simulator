@@ -80,24 +80,21 @@ Crie e aplique o primeiro script
     
 Dê ao veículo um movimento para a frente
 
-    1) clique duplo no script > Metodo update do objeto veiculo, alterar o componente de trasformação; 
-    
-    2) Digite (adicionar 0, 0, 1), representando os respectivos eixos (x, y, e z);
+    1) clique duplo no script > Metodo update do objeto veiculo, alterar o componente de trasformação;    
+
+    void Update()
+    {
+        transform.Translate(0, 0, 1);
+    } 
 
 
-        void Update()
-        {
-            transform.Translate(0, 0, 1);
-        } 
-
-
-Debugando o codigo para alter o componente de trasnformação
+Debugando o codigo acima p/ alterar o componente de trasnformação
     
-    1) um "T" minusculo signigica que estamos recebendo um componente de trasformação / veiculo transform
+    1) um "T" minusculo signigica que estamos recebendo um componente de trasformação / veiculo transform;
     
-    2) Agora vamos movimentar o veiculo na direção z / Utilizando o metodo Translate para mudar a posição
+    2) Utilizando o metodo Translate para mudar a posição. Movimentar o veiculo na direção z;
     
-    3) Acessando a propriedade do metodo Translate, para mudar a posição pelo X, Y e Z;
+    3) Acessando a propriedade do metodo Translate, para mudar a posição pelo eixos X, Y e Z;
     
     4) Adicionado 0 no eixo X para que o veiculo não movar para direita ou esquerda;
     
@@ -105,13 +102,11 @@ Debugando o codigo para alter o componente de trasnformação
     
     6) Adicionado 1 no eixo Z para que o veiculo mova na direção Z;
 
-Use um Vector3 para seguir em frente
+Use um Vector3 para seguir em frente, alterando o codigo do componente de trasnformação
 
-    1) Exclua o 0, 0, 1 digitado e use auto-completo para substituí-lo  por Vector3.forward;
+    1) Excluir o 0, 0, 1 para substituí-lo por Vector3.forward;
     
     
-Alteração no codigo do componente de trasnformação
-
         void Update()
     {
         transform.Translate(Vector3.forward);
@@ -123,35 +118,28 @@ Debugando alteração no codigo do componente de trasnformação
     
     2) basicamente serve para guardar 3 valores, um valor para cada um de seus componentes; 
     
-    3) Você pode usar um Vector3 é comumente usado para guardar ou setar posições dos objetos no espaço 3D;
+    3) Um Vector3 é comumente usado para guardar ou setar posições dos objetos no espaço 3D;
     
-    4) .forward é o pra frente do objeto em que o script do código está
+    4) .forward é o pra frente do objeto no script;
 
 Personalize a velocidade do veículo
 
-    1) Mudar a maneira com que movemos o veiculo;
+    1) mudar a maneira com que movemos o veiculo;
     
-    2) usar o simbolo * para multiplicamos algo;
+    2) usar o simbolo * para multiplicamos;  
     
-    3) Time. para manter o controle do nosso tempo;
+    2) usar o Time. para manter o controle do nosso tempo em vez de frame;    
     
-    4) . deltaTime para obter a mudança no tempo e assim saber quanto tempo se passou;
+    4) usar .deltaTime para obter a mudança no tempo e assim saber quanto tempo se passou;
     
-    5) Adicione * 20 para aumentar a velocidade do veiculo no jogo;
-
-Debugando codigo para manipular a velocidade de movimentação do objeto
-
-        void Update()
+    5) multiplicar * 20 para aumentar a velocidade do veiculo no jogo;
+  
+  
+    void Update()
     {
         transform.Translate(Vector3.forward * Time.deltaTime * 20);
 
     }
-    
-observação 
-
-    Essa pequena equação, Vector3.forward esta armazendo 0, 0 e 1;
-    Sendo multiplicada pelo tempo e por 20;
-    Fazendo assim a multiplicação de cada um dos valores do Vector3;
     
 Adicione componentes rigidbody aos objetos
     
