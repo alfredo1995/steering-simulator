@@ -355,7 +355,7 @@ Faça o veículo girar em vez de deslizar
 
             transform.Rotate(Vector3.up, Time.deltaTime * turnSpeed * horizontalInput);
     
-    5) Exclua o código q estava caluclundo o angulo com turnSpeed > transform.Translate(Vector3.right * Time.deltaTime * turnSpeed * horizontalInput);
+Exclua o código q estava caluclundo o angulo com turnSpeed > transform.Translate(Vector3.right * Time.deltaTime * turnSpeed * horizontalInput);
             
             void Update()
             {
@@ -365,5 +365,6 @@ Faça o veículo girar em vez de deslizar
                 transform.Translate(Vector3.forward * Time.deltaTime * speed * forwardnInput);
                 transform.Rotate(Vector3.up, Time.deltaTime * turnSpeed * horizontalInput);
     
+
 Inicialize variáveis com valores no PlayerController > public float turnSpeed = 50.0f;
     
