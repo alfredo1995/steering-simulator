@@ -15,7 +15,7 @@ Jogo publicado: https://alfredo1995.github.io/simulador-direcao-unity
 
 <br>
 
-Primeiro passo, faça o downloado do prototype 
+Primeiro passo, faça o downloado do prototype 1
 
     https://connect-prd-cdn.unity.com/20210923/c709e76b-3e93-4140-8675-f694b9f04399/Prototype%201%20-%20Starter%20Files.zip
     
@@ -28,33 +28,24 @@ Iniciando Projeto
     3) Selecione Criar e, em seguida, aguarde que a Unity abra seu novo projeto;
 
 
-Importar ativos contendo as cenas (Protótipo 1)
+Importar ativos contendo os personagens e adereços
 
-    [https://learn.unity.com/tutorial/project-setup-processes#60ed7a91edbc2a002096b762](https://assetstore.unity.com/packages/3d/vehicles/land/arcade-free-racing-car-161085)
+    https://assetstore.unity.com/packages/3d/vehicles/land/arcade-free-racing-car-161085  
     
 Protótipo 1
 
-    1) Clique para baixar os arquivos do Protótipo 1, extraia a pasta compactada. > clique para abrir o arquivo;
+    1) Extraia a pasta compactada dos arquivos importados > clique para abrir o arquivo;
 
-    3) Na janela do Projeto, em  Ativos > Cenas > clique duplo na cena do Protótipo 1 para abri-lo;
+    3) Na janela do Projeto, em  Assets > Scenes > Clique duplo na cena do Protótipo 1 para abri-lo;
 
-    4) Assets > Scenes > seleecione a cena > prototype 1 / Exclua a cena padrao q ja não será mais usada;
-
-    5) Clique com o botão direito + arraste para olhar ao redor no início da estrada;
-    
+    4) Assets > Scenes > seleecione a cena > prototype 1;
+  
 
 Adicione seu veículo à cena
 
-    1) Na Janela do Projeto, abra os ativos > Biblioteca de Cursos > Veículos e arraste um veículo para a Hierarquia;    
+    1) Na Janela do Projeto, abra os ativos > Biblioteca de Cursos > Veículos e arraste um veículo para a Hierarquia;      
     
-    2) Segure o botão direito do mouse + WASD para voar até o veículo, em seguida, tente girar em torno dele;  
-    
-    3) Com o veículo selecionado e seu mouse na vista da cena, pressione F para se concentrar nele;
-    
-    4) em seguida, use a roda de rolagem para ampliar e para fora e segurar a roda de rolagem para a panela
-    Segure alt+left-click para girar ao redor do ponto focal ou mantenha alt+right-click para ampliar e sair;
-    
-    5) Se algo der errado, pressione Ctrl/Cmd+Z para desfazer até que seja corrigido;
+    2) Com o veículo selecionado e seu mouse na vista da cena, pressione F para se concentrar nele;
     
 
 Adicione um obstáculo e reposicione-o
