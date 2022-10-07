@@ -326,11 +326,7 @@ Movimento base esquerda/direita na entrada
     
 Assuma o controle da velocidade do veículo
 
-    1) Em PlayerController.cs Declare uma nova variável pública chamada forwardnInput;
-    
-    2) Em Update, atribua forwardInput = Input.GetAxis ("Vertical");
-    
-    3) forwardInput atribuindo ao gerente de entrada input. acessando o metodo GetAxis() informando o eixo que será usado;
+    1) Metodo Update > forwardInput atribuindo ao gerente de entrada input. acessando o metodo GetAxis() informando o eixo que será usado;
     
             void Update()
             {
@@ -340,28 +336,26 @@ Assuma o controle da velocidade do veículo
     4) Adicione a variável forwardInput ao método translate para a frente multiplicado com o speed;
     
             void Update()
-            {
-                horizontalInput = Input.GetAxis("Horizontal");
+            {                
                 forwardnInput = Input.GetAxis("Vertical");
+                horizontalInput = Input.GetAxis("Horizontal");
 
                 transform.Translate(Vector3.forward * Time.deltaTime * speed * forwardnInput);
                 transform.Translate(Vector3.right * Time.deltaTime * turnSpeed * horizontalInput);
                 
 Faça o veículo girar em vez de deslizar
 
-    1) No metodo Update, vamos chamar o trasform usando o metodo de rotação de angulo >  transform.Rotate  > acessando o Vector3. up para pegar um angulo
+    1) metodo Update, chamar trasform acessando o metodo de rotação > transform.Rotate > e acessar Vector3. up pegando o calculo do angulo(turnSpeed);
     
-            transform.Rotate(Vector3.up,
+    2) O angula ja foi calculado em: transform.Translate(Vector3.right * Time.deltaTime * turnSpeed * horizontalInput);
     
-    2) O angula ja foi calculado por conta do turnSpeed (Time.deltaTime * turnSpeed * horizontalInput)
+    3) vamos recotar esse trecho de codigo: Time.deltaTime * turnSpeed * horizontalInput
     
-    3) podemos recotar esse trecho de codigo ( Time.deltaTime * turnSpeed * horizontalInput) no transform do turnSpeed;
-    
-    4) Adicionar no nosso transform.Rotate > 
+    4) Adicionar ao transform.Rotate(Vector3.up, > 
 
-           transform.Rotate(Vector3.up, Time.deltaTime * turnSpeed * horizontalInput);
+            transform.Rotate(Vector3.up, Time.deltaTime * turnSpeed * horizontalInput);
     
-    5) Exclua a linha de código que traduz o turnSpeed  no metodo Update>
+    5) Exclua o código q estava caluclundo o angulo com turnSpeed > transform.Translate(Vector3.right * Time.deltaTime * turnSpeed * horizontalInput);
             
             void Update()
             {
@@ -370,10 +364,6 @@ Faça o veículo girar em vez de deslizar
 
                 transform.Translate(Vector3.forward * Time.deltaTime * speed * forwardnInput);
                 transform.Rotate(Vector3.up, Time.deltaTime * turnSpeed * horizontalInput);
-
-Limpe seu código e hierarquia
-
-    Na hierarquia, clique com o botão > criar uma pasta vazio e renomeá-lo como "Obstáculos", em seguida, arraste todos os obstáculos para ele
     
-    Inicialize variáveis com valores no PlayerController > public float turnSpeed = 50.0f;
+Inicialize variáveis com valores no PlayerController > public float turnSpeed = 50.0f;
     
