@@ -149,47 +149,41 @@ Adicione componentes rigidbody aos objetos
     
     2) Selecione o Obstáculo e, em seguida, na hierarquia clique em Adicionar componente e selecione RigidBody;
     
-    3) Nas propriedades do componente RigidBody, aumente a massa de veículos 100 e obstáculos 2 para ser sobre o que eles estariam em quilogramas;
+    3) Nas propriedades do componente RigidBody, aumente a massa de veículos p/ 100 e obstáculos p/ 2 assim eles estão em quilogramas;
     
     4) Mesh Collider sao os nossos caminho como o que esses objetos podem ser colididos;
     
     
 Duplicar e posicionar os obstáculos
 
-    1) Clique e arraste seu obstáculo para a parte inferior da lista na hierarquia
+    1) Clique e em seu obstáculo a janela de hierarquia;
     
-    2) Pressione Ctrl/Cmd+D para duplicar o obstáculo e movê-lo para baixo do eixo Z 
-    
-    3) Repita isso mais algumas vezes para criar mais obstáculos
-    
-    4) Depois de fazer algumas duplicatas, selecione uma na hierarquia e segure ctrl + clique para selecionar vários obstáculos e, em seguida, duplique-as 
+    2) Pressione Ctrl/Cmd+D para duplicar o obstáculo e movê-lo para baixo do eixo Z;     
 
 Adicione uma variável de velocidade para o seu veículo
 
-    0) vamos criar uma nova variavel "speed" para o veiculoPosition e defini o camePositon com base nessa variavel
+    0) vamos criar uma nova variavel "speed" para definimos a velocidade do veiculo nessa variavel;
     
     1) essa variavel vai ser capaz de alterar o * 20 que esta sendo multiplicado pelo tempo;
     
-    1) No PlayerController.cs, adicione velocidade de flutuação pública  = 5,0f;  no topo da classe
+    2) No PlayerController.cs, atribua a velocidade de flutuação pública  = 5,0f;  no topo da classe
     
-    2) atribuir valor a nossa variavel de velocidade 
-    
-                Public class PlayController : Monobehaviour {
+   
+        Public class PlayController : Monobehaviour {
 
-                float speed = 5.0f;
+        float speed = 5.0f;
         
-    2.1) assim onde tem o 20 no nosso metodo update onde estamos transformando nosso objeto
         
-    2.2) vamos substuir o valor da velocidade de 20 pela nossa variavel "speed" para alterar a velocidade do veiculo; 
+    3) assim onde tem o 20 que esta sendo multiplicado pelo tempo;
         
-                void Update()
-                {
-                transform.Translate(Vector3.forward * Time.deltaTime * speed);
+    4) vamos substuir o valor da velocidade de 20 pela nossa variavel "speed" para alterar a velocidade do veiculo; 
+        
+        void Update()
+        {
+            transform.Translate(Vector3.forward * Time.deltaTime * speed);
 
-                }        
-            
-    2.3) Agora nossa variavel de velocidade esta no scopo global pertencendo assim a todas as class
-                    
+        }        
+                             
 
 Crie um novo script para a câmera
 
