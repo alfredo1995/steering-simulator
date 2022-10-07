@@ -189,16 +189,15 @@ Crie um novo script para a câmera
 
     1) Crie um novo script C# chamado FollowPlayer e conecte-o à câmera;
     
-    2) Clique como botao esquerdo no script FollowPlayer e arraste para dentro da hieraquia "Main Camera";
+    2) Clique no script FollowPlayer e arraste para dentro da hieraquia "Main Camera";
     
     3) Clique duplo no script FollowPlayer para ser aberto no visual studio;
     
-    4) vamos criar um variavel publica do tipo GameObject que sirva de referencia para nosso veiculo(player) com a Main Camera
+    4) vamos criar um variavel publica do tipo GameObject que sirva de referencia para nosso player(veiculo) com a Main Camera
     
-            public class FollowPlayer : MonoBehaviour
-            {
-            public GameObject player;
-            }
+        public class FollowPlayer : MonoBehaviour
+        {
+            public GameObject player;        
         
     5) No unity selecione a "Main Camera" > no componente de script > vai visualizar a variavel Player contendo > None(GameObject)
     
@@ -208,39 +207,34 @@ Crie um novo script para a câmera
     
     8) Vamos obter a transformação da posição da camera no metodo update atribuindo a referencia player
     
-    9) vamos acersar o compornente de trasnformação do player player.transform e obter a posição player.transform.position    
+    9) vamos acersar o compornente de trasnformação do player player.transform e obter a posição
     
            void Update()
             {
                 transform.position = player.transform.position;
             }
     
-    10) Então agora a posição da câmera será definido para posição atual do player(veiculo)        
+    10) Agora a posição da câmera será definido para posição atual do player(veiculo)        
     
 Adicione um deslocamento à posição da câmera
     
     0) Vamos compensar a câmera atrás do player, adicionado a posição do player;
 
-    1) No script FollowPlayer.cs no metodo update onde estamos definindo a posição da nossa camera a posição acima e atras do player;
+    1) Script FollowPlayer.cs no metodo update onde estamos definindo a posição da nossa camera(transform.position);    
     
-    2) Vamos adicionar para a posição do player, para que possamos compensar nossa câmera;
+    2) Na linha no método 'criar' um novo Vector3(0, 5, -7), será criado um novo Vector3 apenas para essa linha de codigo;
     
-    3) Na linha no método 'criar' um novo Vector3(0, 5, -7), será criado um novo Vector3 apenas para essa linha de codigo;
-    
-    4) o novo Vector3 tera nas respectivas posições ( X = 0, Y = 5 e Z = -7);
+    3) o novo Vector3 tera nas respectivas posições ( X = 0, Y = 5 e Z = -7);
     
             void Update()
             {
                 transform.position = player.transform.position + new Vector3(0, 5, -7);
             }
-
-    5) Na posição da sua câmera ( transform.position ) onde e definido como a posição do jogador (player.transform.position) e adicionado
-       um novo Vector3 com os valores ( X = 0, Y = 5 e Z = -7);
        
        
 Faça o deslocamento em uma variável Vector3
 
-    1) Vamos criar uma variavel para Vector3 e assim remover os valores codificado ( X = 0, Y = 5 e Z = -7);
+    1) Vamos criar uma variavel Vector3 e assim remover os valores codificado ( X = 0, Y = 5 e Z = -7);
     
     2) No topo do FollowPlayer.cs, declare deslocamento privado do Vector3; 
     
@@ -248,9 +242,10 @@ Faça o deslocamento em uma variável Vector3
     
     4) vamos definir esta variavel para ser o valor codificado ( X = 0, Y = 5 e Z = -7);
     
-    5) vamos remover os valores codificado new Vector3(0, 5, -7); referente ao> transform.position = player.transform.position + new Vector3(0, 5, -7);
+    5) vamos remover os valores codificado new Vector3(0, 5, -7);
     
-    6) e defini na variavel offset >  private Vector3 offset = new Vector3(0, 5, -7);
+    6) defini uma variavel do tipo vector3 chamada "offset", atribuindo o novo vector3 que sera responsavel pela inicialização  
+
 
             public class FollowPlayer : MonoBehaviour
             {
@@ -267,23 +262,6 @@ Faça o deslocamento em uma variável Vector3
                 transform.position = player.transform.position + offset;
             }
             
-    9) foi criado uma variavel do tipo vector3 chamada "offset", atribuindo o novo vector3 que sera responsavel pela inicialização  
-    
-Suavizar a câmera com LateUpdate
-        
-    1) vamos fazer uma mundaça no script FollowPlayer.cs para fazer o veiculo se move suavemente;
-        
-    2) No metodo Update nosso veiculo e nossa câmera estão se movendo ao mesmo tempo
-        
-    3) Vamos alterar o metodo  de atualização "Update" por "LateUpdate";
-        
-Edite a cor da tonalidade do playmode 
-
-    1) No menu superior, vá para Editar preferências de > (Windows) ou Unity > Preferences (Mac) 
-        
-    2) No menu esquerdo, escolha Cores e edite a cor "Playmode tint" para ter uma cor leve 
-        
-    3) Em nosso FollowPlayer.cs apredendo a usar nossa primeira variavel publica para poder anexar uma referencia ao nosso player(veiculo) em unity
        
 Deixe o veículo mover-se para a esquerda/direita
 
