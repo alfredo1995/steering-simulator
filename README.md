@@ -4,12 +4,12 @@ Jogo publicado: https://alfredo1995.github.io/simulador-direcao-unity
 
 <br>
 
-    Empyty GameObjects pasta p/ organizar os objetos;
+    Empyty GameObjects p/ organizar os objetos;
     GameObjetos p/ representar os personagens, adereços e cenários;
     Componente Script C# p/ transformar os GameObjetos em algo;
     Progamando o Script p/ ser posivel dirigir o veiculo pela estrada;
-    InputManager p/ obter a entrada do veiculo, assim usar as teclas do teclado;
-    Componente Transform, para determina a Posição, Rotação e Escala do Veiculo(objeto);
+    InputManager p/ obter as teclas de entrada do veiculo;
+    Componente Transform, para determina suas Posição, Rotação e Escala do Veiculo;
     Componente Translate, para definir a posição ou mover um objeto;
     Componente Rotate, para girar o veiculo;
 
@@ -21,18 +21,16 @@ Primeiro passo, faça o downloado do prototype
     
 Iniciando Projeto
     
-    1) No desktop, clique com o botão direito do mouse > criar uma nova pasta, em seguida, "nomeie-o a pasta";
+    1) No desktop > criar uma nova pasta, em seguida, "nomeie-o a pasta";
 
-    2) Crie um novo projeto Unity usando o modelo 3D - lembre-se de usar uma das versões suportadas do Unity;
+    2) Crie um novo projeto Unity usando o modelo 3D;
 
-    3) Nomeie o projeto baixado "Protótipo 1" e defina o local do arquivo para a nova pasta criada;
-
-    4) Selecione Criar e, em seguida, aguarde que a Unity abra seu novo projeto;
+    3) Selecione Criar e, em seguida, aguarde que a Unity abra seu novo projeto;
 
 
 Importar ativos contendo as cenas (Protótipo 1)
 
-    https://learn.unity.com/tutorial/project-setup-processes#60ed7a91edbc2a002096b762
+    [https://learn.unity.com/tutorial/project-setup-processes#60ed7a91edbc2a002096b762](https://assetstore.unity.com/packages/3d/vehicles/land/arcade-free-racing-car-161085)
     
 Protótipo 1
 
