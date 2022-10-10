@@ -368,3 +368,138 @@ Exclua o código q estava caluclundo o angulo com turnSpeed > transform.Translat
 
 Inicialize variáveis com valores no PlayerController > public float turnSpeed = 50.0f;
     
+
+        
+ <br>
+ 
+ ------------------------------
+ 
+ <br>
+        
+Desenvolvimento do jogo alimentando animais
+
+
+Primeiro passo, faça o downloado do prototype 2
+
+    https://connect-prd-cdn.unity.com/20210507/bfd26de3-a68a-4a16-8cf6-8eacf2bb7f75/Prototype%202%20-%20Starter%20Files.zip
+    
+Iniciando o projeto
+
+        1) No desktop > criar uma nova pasta, em seguida, "nomeie-o a pasta";
+
+        2) Crie um novo projeto Unity usando o modelo 3D;
+
+        3) Selecione Criar e, em seguida, aguarde que a Unity abra seu novo projeto;
+        
+Importar ativos contendo os personagens e adereços
+    
+        1) Extraia a pasta compactada dos arquivos importados > clique para abrir o arquivo;
+
+        3) Na janela do Projeto, em  Assets > Scenes > Clique duplo na cena do Protótipo 1 para abri-lo;
+
+        4) Assets > Scenes > seleecione a cena > prototype 2;
+    
+Adicione objetos à cena
+    
+        1) Na Janela do Projeto, abra os ativos > Biblioteca de Cursos > Humans e arraste um personagem para a Hierarquia;      
+
+        2) faça o mesmo adicioanando 3 animais e 3 frutas na Hierarquia;
+    
+Posicioando os objetos
+
+        1) Selecione o Humans;
+
+        2) No Inspetor do Humans, no canto superior direito do componente Transformar, clique na opções > Redefinir a posição;    
+
+        3) No Inspetor, altere o Local XYZ para x=0, y=0, z=25;
+        
+        4) Nomeie o Human para Player
+        
+        
+        1) Selecione o Animals 1;
+
+        2) No Inspetor do Animals 1, no canto superior direito do componente Transformar, clique na opções > Redefinir a posição;    
+
+        3) No Inspetor, altere o Local XYZ para x=0, y=0, z=12;  
+    
+    
+        1) Selecione o Animals 2;
+
+        2) No Inspetor do Animals 2, no canto superior direito do componente Transformar, clique na opções > Redefinir a posição;    
+
+        3) No Inspetor, altere o Local XYZ para x=12, y=0, z=12;          
+        
+        
+        1) Selecione o Animals 3;
+
+        2) No Inspetor do Animals 3, no canto superior direito do componente Transformar, clique na opções > Redefinir a posição;    
+
+        3) No Inspetor, altere o Local XYZ para x=-12, y=0, z=12;  
+        
+        
+        1) Selecione o Fruta 1;
+
+        2) No Inspetor do Fruta 1, no canto superior direito do componente Transformar, clique na opções > Redefinir a posição;    
+
+        3) No Inspetor, altere o Local XYZ para x=0, y=0, z=6;  
+        
+        
+        1) Selecione o fruta 2;
+
+        2) No Inspetor do fruta 2, no canto superior direito do componente Transformar, clique na opções > Redefinir a posição;    
+
+        3) No Inspetor, altere o Local XYZ para x=6, y=0, z=6;  
+        
+        
+        1) Selecione o fruta 3;
+
+        2) No Inspetor do fruta 3, no canto superior direito do componente Transformar, clique na opções > Redefinir a posição;    
+
+        3) No Inspetor, altere o Local XYZ para x=-6, y=0, z=6;  
+        
+        
+Obtenha a entrada horizontal do usuário
+
+        1) Na janela Do projeto, criei uma pasta chamada "Scripts"
+
+        2) Na pasta "Scripts", clique com o botão direito do mouse > Criar >C# Script chamado "PlayerController" 
+
+        3) Arraste o novo script para o objeto Player;
+        
+        4) clique duplo no script > No topo da class, declare um novo flutuador público horizontalInput;  
+        
+        5) Em Update(), defina horizontalInput = Input.GetAxis("Horizontal")
+        
+            public class PlayerController : MonoBehaviour
+            {
+                private float horizontalInput;
+                
+            void Update()
+            {
+                horizontalInput = Input.GetAxis("Horizontal");
+            }
+
+
+         6) horizontalInput recebendo o gerenciado de entrada, acessando os metodos de entrada getaxis("Horizontal");
+        
+Mova o jogador da esquerda para a direita
+
+        1) Declarar uma nova velocidade de flutuação pública = 10,0f; 
+        
+        2) Em Update(), transform > acessando o componente transforme 
+           .Translate > mundando o a posição
+           Verctor3.right representando os eixo x, y e z;
+           multiplicado pelo horizontalInput para sabe a direção
+           multiplicado pelo Time.deltaTime para se calculado por tempo e nao frame
+           multiplicado pela varivavel responsavel por determinar a velocidade
+        
+            void Update()
+            {
+                transform.Translate(Vector3.right * horizontalInput * Time.deltaTime * speed);
+            }
+            
+            
+        
+       
+        
+        
