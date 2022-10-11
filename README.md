@@ -619,3 +619,27 @@ Destruir projéteis fora da tela
         3) Escreva código para destruir se fora dos limites superiores se (transform.position.z > topBound) { Destroy(gameObject); }
         
         4) No Inspetor Substitui a queda, clique em Aplicar tudo para aplicá-lo ao pré-fabricado;
+        
+Destruir animais fora da tela
+
+        1) Crie uma instrução de seleção para verificar se os objetos estão abaixo do lowerBound: caso (transform.position.z < lowerBound)
+        
+        2) Aplique o script a todos os animais, em seguida, anular os pré-fabricados
+
+                public class DestroyOutBounds : MonoBehaviour
+                {
+                    public float topBound = 30.0f;
+                    public float lowerBound = -10.0f;
+
+                        void Update()
+                    {
+                        if(transform.position.z > topBound)
+                        {
+                            Destroy(gameObject);
+                        }else if(transform.position.z < lowerBound){
+                            Destroy(gameObject);
+                        }
+                    }
+                }
+                
+12
