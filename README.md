@@ -2,18 +2,6 @@ Aprendendo os fundamentos para criação de Jogo em C# na unity através da plat
 
 Jogo publicado: https://alfredo1995.github.io/simulador-direcao-unity
 
-<br>
-
-    Empyty GameObjects p/ organizar os objetos;
-    GameObjetos p/ representar os personagens, adereços e cenários;
-    Componente Script C# p/ transformar os GameObjetos em algo;
-    Progamando o Script p/ ser posivel dirigir o veiculo pela estrada;
-    InputManager p/ obter as teclas de entrada do veiculo;
-    Componente Transform, para determina suas Posição, Rotação e Escala do Veiculo;
-    Componente Translate, para definir a posição ou mover um objeto;
-    Componente Rotate, para girar o veiculo;
-
-<br>
 
 Primeiro passo, faça o downloado do prototype 1
 
