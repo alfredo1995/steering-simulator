@@ -510,10 +510,37 @@ Mantenha as entradas do jogador
                 {
                      transform.position = new Vector3(-12, transform.position.y, transform.position.z);
                 }
-       
+                
+               if (transform.position.x > 12)
+                {
+                    transform.position = new Vector3(12, transform.position.y, transform.position.z);
+                }
         
         3) if acessando a posição, pegando um valor especifico "x", certificando q e - 12 ;
         
         4) obtendo a posição de x = configurar para a posição com um novo vecto3(definindo sua posição limite ate -12,
             mas posição x e y não muda);
-        
+  
+  
+Declarar variavel para controlar o valor da posição limite;
+
+    1) Declare nova  variável xRange e substitua os valores codificados por eles
+
+            public class PlayerController : MonoBehaviour
+            {
+                public float xRanger = 12.0f;
+                
+                
+     2)substitua os valores codificados por ela   
+     
+
+                if (transform.position.x < -xRanger)
+                {
+                    transform.position = new Vector3(-xRanger, transform.position.y, transform.position.z);
+                }
+                if (transform.position.x > xRanger)
+                {
+                    transform.position = new Vector3(xRanger, transform.position.y, transform.position.z);
+                }
+                
+                
