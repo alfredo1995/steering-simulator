@@ -1,5 +1,7 @@
 Jogo publicado: https://alfredo1995.github.io/simulador-direcao-unity
 
+<br>
+
 Aprendendo os fundamentos para criação de Jogo em C# na unity através da plataforma learn.unity    
     
     GameObjetos p/ representar os personagens, adereços e cenários;
