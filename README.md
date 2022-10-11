@@ -498,8 +498,22 @@ Mova o jogador da esquerda para a direita
                 transform.Translate(Vector3.right * horizontalInput * Time.deltaTime * speed);
             }
             
-            
+Mantenha as entradas do jogador
         
+        1)Em Update(), escreva uma instrução se a posição X esquerda do jogador for menor que um determinado valor
+            
+        2)Na instrução if, defina a posição do jogador para sua posição atual, mas com um local X fixo
+        
+            void Update()
+            {
+                if (transforma.position.x < -12)
+                {
+                     transform.position = new Vector3(-12, transform.position.y, transform.position.z);
+                }
        
         
+        3) if acessando a posição, pegando um valor especifico "x", certificando q e - 12 ;
+        
+        4) obtendo a posição de x = configurar para a posição com um novo vecto3(definindo sua posição limite ate -12,
+            mas posição x e y não muda);
         
