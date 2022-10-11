@@ -541,4 +541,60 @@ Declarar variavel para controlar o valor da posição limite;
                     transform.position = new Vector3(xRanger, transform.position.y, transform.position.z);
                 }
                 
+Faça o projétil voar para a frente
+
+        1) Crie um novo script "MoveForward", conecte-o ao objeto de comida e abra-o
+        
+        2) Declare uma nova  variável de velocidade de flutuação pública;
+        
+        3)Em Update(), adicione transformar. Traduzir (pegar a posicao x, y e z. direçao -> Vector3.forward 
+          multiplicado pelo tempo e velocidade * Time.deltaTime * velocidade);
+        
+                public class MoveForward : MonoBehaviour
+                {
+                   public float speed = 10.0f;
+
+                   void Start()
+                    {
+
+                    }
+
+                    void Update()
+                    {
+                        transform.Translate(Vector3.forward * Time.deltaTime * speed);
+                    }
+                }
                 
+Transforme o projétil em um prefab
+
+
+        1) Crie uma nova pasta "Prefabs", arraste sua comida para ela e escolha o Prefab original
+
+fazendo com que o player tenha a referencia da comida
+    
+        1) No PlayerController.cs, declare uma nova variável public do tipo GameObjectresponsavel por armazenar objetos (GameObjectPrefab);
+        
+                public class PlayerController : MonoBehaviour
+                {
+                    public GameObject projectilePrefab;
+        
+        2)Selecione o Jogador na hierarquia e arraste  o objeto da pasta Prefabs para a nova caixa Pré-fabricado de projétil no inspetor
+        
+Teste para a prensa da barra espacial
+
+        1) No PlayerController.cs, em Update(), adicione uma instrução condicional p/ verificar se foi precionado a 
+           barra de espaço na função transform.Translate(Vector3.right * horizontalInput * Time.deltaTime * speed);
+        
+                if (Input.GetKeyDown(KeyCode.Space))
+                {
+                    //lançar um projetil do jogador
+                }
+
+Lançar projétil na prensa da barra espacial
+
+        1) Dentro da instrução if, use o  método Instantiate para gerar um novo (objeto) na localização do jogador. com a rotação do pré-fabricado
+        
+                if (Input.GetKeyDown(KeyCode.Space))
+                {
+                    Instantiate(projectilePrefab, transform.position, projectilePrefab.transform.rotation);
+                }
