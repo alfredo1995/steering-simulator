@@ -593,9 +593,29 @@ Teste para a prensa da barra espacial
 
 Lançar projétil na prensa da barra espacial
 
-        1) Dentro da instrução if, use o  método Instantiate para gerar um novo (objeto) na localização do jogador. com a rotação do pré-fabricado
+        1) Dentro da instrução if, use o método Instantiate para gerar um novo (objeto) na localização do jogador. com a rotação do pré-fabricado
 
                 if (Input.GetKeyDown(KeyCode.Space))
                 {
                     Instantiate(projectilePrefab, transform.position, projectilePrefab.transform.rotation);
                 }
+                
+Transforme animais em pré-fabricados
+
+        1) Gire todos os animais no eixo Y em 180 graus para enfrentar
+        
+        2) Selecione os três animais na hierarquia e adicione componente > MoveForward.cs
+        
+        3) Edite seus valores de velocidade e teste para ver como ele se parece
+        
+        4) Arraste os três animais para a pasta Prefabs, escolhendo "Original Prefab"
+        
+Destruir projéteis fora da tela
+
+        1) Crie o script "DestroyOutOfBounds" e aplique-o no projétil(comida)
+        
+        2)Adicione uma nova  variável de topo de flutuação privada e inicialize-a = 30;
+        
+        3) Escreva código para destruir se fora dos limites superiores se (transform.position.z > topBound) { Destroy(gameObject); }
+        
+        4) No Inspetor Substitui a queda, clique em Aplicar tudo para aplicá-lo ao pré-fabricado;
