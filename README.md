@@ -720,13 +720,33 @@ Randomize o local da desova
 
                     Instantiate(animalPrefabs[AnimalIndex], spawnPosition, animalPrefabs[AnimalIndex].transform.rotation);
         
-        4) No topo da classe, crie  variáveis de flutuação privadas para desovarRangeX  e gerarPosZ
+        4) No topo da classe, crie  variáveis de flutuação privadas para desovarRangeX 
    
                     public class SpawnManager : MonoBehaviour
                     {
                         private float spawnRangex = 20;
                         
-        5)substua a cordenaza z pela variavel responsavel pela inizializao da posição z
+        5)substua a cordenaza X pela variavel responsavel pela inizializao da posição X
         
-                    Vector3 spawnPosition = new Vector3(Random.Range(-20, 20), 0, spawnRangeX);
+                    Vector3 spawnPosition = new Vector3(Random.Range(-spawnRangeX, 20), 0, spawnRangeX);
 
+
+        6) No topo da classe, crie  variáveis de flutuação privadas para desovarRangez 
+   
+                    public class SpawnManager : MonoBehaviour
+                    {
+                        private float spawnRangeZ = 20;
+                        
+        7) substua a cordenaza Z pela variavel responsavel pela inizializao da posição Z
+        
+                    Vector3 spawnPosition = new Vector3(Random.Range(-spawnRangeX, spawnRangeZ), 0, spawnRangeX);
+
+        8) Agora temos as variaves para mudar as cordenas X e Z
+        
+Mude a perspectiva da câmera
+
+        1) Alternar entre perspectiva e visão isométrica na visão de cena para apreciar a diferença
+        
+        2) Selecione a câmera e altere a projeção de "Perspectiva" para "Ortográfica"
+        
+DSF
