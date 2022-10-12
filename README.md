@@ -831,3 +831,15 @@ Acione uma mensagem de "Game Over"
                 {
                     Debug.Log("Game Over");
                     Destroy(gameObject);
+
+Recaptulando
+
+Fizemos os animais de debandarem aleatoriacamente 
+Adicionando colide para dectar colisão
+Limitamos ate onde os animias podem ir
+função InvokeRepeating() para instanciasse animais em momento diferente
+função OnTriggerEnter() Quando um GameObject colide com outro GameObject, o Unity chama OnTriggerEnter. 
+mensagem de de debug.log no conosole para saber o fim do jogo
+criado arquivo SpawnManager para armazer os objetos (animias) em uma matriz
+
+
