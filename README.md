@@ -749,4 +749,50 @@ Mude a perspectiva da câmera
         
         2) Selecione a câmera e altere a projeção de "Perspectiva" para "Ortográfica"
         
-DSF
+Faça um novo método para desovar animais
+
+        1) Em SpawnManager.cs, crie um novo vazio SpawnRandomAnimal() {} função abaixo da Atualização()
+        
+        2) Corte e cole o código da instrução if-then para a nova função
+        
+        3) Chame SpawnRandomAnimal();  se S é pressionado
+
+                void Update()
+                {
+
+                    if (Input.GetKeyDown(KeyCode.S))
+                    {
+                        SpawnRandomAnimal();
+                    } 
+                }
+
+                void SpawnRandomAnimal()
+                {
+                    int AnimalIndex = Random.Range(0, animalPrefabs.Length);
+                    Vector3 spawnPosition = new Vector3(Random.Range(-spawnRangeX, spawnRangeZ), 0, spawnRangeX);
+
+                    Instantiate(animalPrefabs[AnimalIndex], spawnPosition, animalPrefabs[AnimalIndex].transform.rotation);
+                }
+
+Desovar os animais em intervalos cronometrado
+
+        1) Em Start(), use InvokeRepeating para desovar os animais com base em um intervalo
+                
+                        InvokeRepeating("SpawnRandomAnimal", 2, 1.5);
+        
+        2) Remova a instrução if que os testes para S sendo pressionados
+        
+        3) Declare duas novas variáveis do tipo float para lidar com os numeros baseado no começo e intervado
+        
+                public class SpawnManager : MonoBehaviour
+                {
+                    public float starDelay = 2.0f;
+                    public float spawnInterval = 1.5f;                    
+                    
+                void Start()
+                {
+                    InvokeRepeating("SpawnRandomAnimal", starDelay, spawnInterval);
+                }
+
+adfsaf   
+        
