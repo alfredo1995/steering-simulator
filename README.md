@@ -659,3 +659,36 @@ Crie um gerenciador de desova
     5) No Inspetor, altere o tamanho do Array para corresponder à contagem de animais e, em seguida, 
        atribua seus animais arrastando-os da janela do Projeto para as GameObject None: 
        Armazendo assim os animais na variavel animalPrefabs
+       
+Desovar um animal se S for pressionado
+
+    1) Em Update(), escreva uma instrução if p/ instanciar um novo pré-fabricado animal
+       Acessando o gerenciador de entrada Iniput > GetKeyDown ao pressionar a tecla pra baixo
+       KeyCode.S tecla que sera precionada.
+       Executando a ação de criar um objeto pelo indice dele -> Instantiate(animalPrefabs[0],
+       onde sera determinado as posição(Vector3) e direção(rotation) de onde sera instanciado
+       
+            void Update()
+            {
+                if (Input.GetKeyDown(KeyCode.S))
+                {
+                    Instantiate(animalPrefabs[0], new Vector3(0, 0, 20), animalPrefabs[0].transform.rotation);
+                } 
+            }
+            
+     2)Controlar o indice, criando uma variavel de inicialização publica do tipo int
+     
+            public class SpawnManager : MonoBehaviour
+            {
+                public int AnimalIndex;
+                
+      3)Substituindo os indice pela varivel de inicialização
+      
+            void Update()
+            {
+                if (Input.GetKeyDown(KeyCode.S))
+                {
+                    Instantiate(animalPrefabs[AnimalIndex], new Vector3(0, 0, 20), animalPrefabs[AnimalIndex].transform.rotation);
+                } 
+            }
+
