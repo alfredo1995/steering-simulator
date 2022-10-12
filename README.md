@@ -642,4 +642,20 @@ Destruir animais fora da tela
                     }
                 }
                 
-12
+Crie um gerenciador de desova
+
+    1) Na Hierarquia, crie um Empety Object chamado "SpawnManager" 
+    
+    2) Crie um novo script chamado "SpawnManager", conecte-o ao Spawn Manager e abra-o
+    
+    3) Declare nova Variavel do tipo GameObject público[ ] com o nome de animalPrefabs; 
+    
+    4) O [] siginifica criação de matriz = variavel q armezar varios objetos ou multiplicas variaveis
+    
+            public class SpawnManager : MonoBehaviour
+            {
+                public GameObject[] animalPrefabs; 
+
+    5) No Inspetor, altere o tamanho do Array para corresponder à contagem de animais e, em seguida, 
+       atribua seus animais arrastando-os da janela do Projeto para as GameObject None: 
+       Armazendo assim os animais na variavel animalPrefabs
