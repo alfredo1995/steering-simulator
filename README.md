@@ -706,5 +706,27 @@ Desovar animais aleatórios de matriz
                     int AnimalIndex = Random.Range(0, animalPrefabs.Length);
 
       
-      
-      
+Randomize o local da desova
+        
+        1) gerar uma posição aleatoria no eixo x usando a class Random.Range no lugar da cordenada x       
+                   
+        2) Substitua o valor X para o Vector3 por Random.Range(-20, 20), em seguida, teste
+        
+                   Instantiate(animalPrefabs[AnimalIndex], new Vector3(Random.Range(-20, 20), 0, 20), animalPrefabs[AnimalIndex].transform.rotation);
+
+        3) Declarar a variavel do tipo Vector3  com nome de spawnPosition = atribuir o controle das condernadas, subistiuido o new Vector3
+        
+                    Vector3 spawnPosition = new Vector3(Random.Range(-20, 20), 0, 20);
+
+                    Instantiate(animalPrefabs[AnimalIndex], spawnPosition, animalPrefabs[AnimalIndex].transform.rotation);
+        
+        4) No topo da classe, crie  variáveis de flutuação privadas para desovarRangeX  e gerarPosZ
+   
+                    public class SpawnManager : MonoBehaviour
+                    {
+                        private float spawnRangex = 20;
+                        
+        5)substua a cordenaza z pela variavel responsavel pela inizializao da posição z
+        
+                    Vector3 spawnPosition = new Vector3(Random.Range(-20, 20), 0, spawnRangeX);
+
