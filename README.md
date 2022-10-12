@@ -822,4 +822,12 @@ Adicionar componentes de colisor e gatilho
                     Destroy(other.gameObject);
                 }
                 
-fasdfa
+Acione uma mensagem de "Game Over"
+
+        1) Em DestroyOutOfBounds.cs, na condição de outra pessoa que verifica se os animais atingem a parte inferior da tela,
+           adicione um Game Over messsage: Debug.Log("Game Over!") 
+           
+                }else if(transform.position.z < lowerBound)
+                {
+                    Debug.Log("Game Over");
+                    Destroy(gameObject);
