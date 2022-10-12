@@ -794,5 +794,13 @@ Desovar os animais em intervalos cronometrado
                     InvokeRepeating("SpawnRandomAnimal", starDelay, spawnInterval);
                 }
 
-adfsaf   
+Adicionar componentes de colisor e gatilho
+
+        1) Clique duas vezes em um dos pré-fabricados animais, em seguida, adicione o componente > Box Collider
+        
+        2) Clique em Edit Colider e arraste as alças do colisor para abranger o objeto
+        
+        3) Repita este processo para cada um dos animais e o projétil
+        
+        4) Adicione um componente RigidBody ao projétil e desmarque a "gravidade do uso"
         
