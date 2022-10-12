@@ -804,3 +804,22 @@ Adicionar componentes de colisor e gatilho
         
         4) Adicione um componente RigidBody ao projétil e desmarque a "gravidade do uso"
         
+        
+ Destruir objetos em colisão      
+ 
+        1) Crie um novo detectCollisions.cs script, adicione-o a cada pré-fabricado animal e  abra-o
+        
+        2) Adicione  a função OnTriggerEnter usando autocompletar
+        
+        3)Em OnTriggerEnter, coloque Destroy (gameObject); p/  q seja destruido um object
+        
+        4) Em OnTriggerEnter, coloque Destroy (outro.gameObject); p/ q seja destruido ambos object
+
+
+                private void OnTriggerEnter(Collider other)
+                {
+                    Destroy(gameObject);
+                    Destroy(other.gameObject);
+                }
+                
+fasdfa
