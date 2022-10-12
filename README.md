@@ -676,13 +676,13 @@ Desovar um animal se S for pressionado
                 } 
             }
             
-     2)Controlar o indice, criando uma variavel de inicialização publica do tipo int
+     2) Reogandiznado o codigo. Controlar o indice, declarando uma variavel de inicialização publica do tipo int
      
             public class SpawnManager : MonoBehaviour
             {
                 public int AnimalIndex;
                 
-      3)Substituindo os indice pela varivel de inicialização
+      3) Substituindo os indice pela varivel de inicialização
       
             void Update()
             {
@@ -692,3 +692,19 @@ Desovar um animal se S for pressionado
                 } 
             }
 
+Desovar animais aleatórios de matriz
+
+      1) Remova a variável global animalIndex, uma vez que ela só é necessária localmente na declaração de verificação if 
+
+      2) Na verificação se S é pressionado, class Random gere um animal int aleatórioIndex entre 0 e o comprimento(length) da matriz
+      
+            void Update()
+            {
+
+                if (Input.GetKeyDown(KeyCode.S))
+                {
+                    int AnimalIndex = Random.Range(0, animalPrefabs.Length);
+
+      
+      
+      
