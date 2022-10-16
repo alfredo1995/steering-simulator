@@ -462,3 +462,64 @@ Ajuste a força de salto e a gravidade
                         }
                     }
                 }
+
+Evite que o jogador pule duas vezes
+
+        1) Adicione uma nova variável  de bool isOnGround público e defina-a igual a verdade
+        
+        2) Na declaração se fazendo o jogador saltar, definir isOnGround = false,
+        
+        3) Adicione uma condição && isOnGround à declaração if ( && = e , para que haja mais uma afirmação)
+        
+        4) Adicione um novo metodo vazio OnCollisionEnter, definir isOnGround = verdadeiro nesse método
+        
+        5) quando o player estiver no chao = true , quando nao tiver = false
+        
+                public class PlayerController : MonoBehaviour
+                {
+                    public bool isOnGround = true;
+                    
+                    void Update()
+                    {
+                        if (Input.GetKeyUp(KeyCode.Space) && isOnGround)
+                        {
+                            PlayerRb.AddForce(Vector3.up * jumpForce, ForceMode.Impulse);
+                            isOnGround = false; 
+                        }
+                    }
+
+                    private void OnCollisionEnter(Collision collision)
+                    {
+                        isOnGround = true;
+
+                    }
+                }
+                
+Faça um obstáculo e mova-o para a esquerda
+
+            1) Da Biblioteca de Curso > Obstáculos, adicione um obstáculo, renomeie-o como "Obstáculo", e  posicione-o onde deve desovar
+            
+            2) Aplique um  componente rígido do colisor de corpo e caixa e, em seguida, edite os limites do colisor para se encaixar no obstáculo
+            
+            3) Crie uma nova pasta "Prefabs" e arraste-a para criar um novo Prefab original
+            
+            4) Crie um novo script "MoveLeft",  aplique-o ao obstáculo e  abra-o para dar o efeito "parallax"
+            
+            5) Em MoveLeft.cs, escreva o código para traduzi-lo para a esquerda de acordo com a 
+               variável de velocidade. Aplique o script MoveLeft ao fundo(background)
+               
+                    public class MoveLeft : MonoBehaviour
+                    {
+                        public float speed = 10.0f;
+                        void Start()
+                        {
+
+                        }
+
+                        void Update()
+                        {
+                            transform.Translate(Vector3.left * Time.deltaTime * speed);  
+                        }
+                    }
+                    
+Crie um gerenciador de desova
