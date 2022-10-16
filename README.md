@@ -366,6 +366,42 @@ Exclua o código q estava caluclundo o angulo com turnSpeed > transform.Translat
 
 Inicialize variáveis com valores no PlayerController > public float turnSpeed = 50.0f;
     
+    
+    
+    
+    
+    
+<br> <br>
 
-     
 
+
+
+
+O caráter, o plano de fundo e o obstáculo de sua escolha serão configurados. O jogador será capaz de pressionar a barra espacial e fazer o personagem saltar, à medida que os obstáculos desovam na borda da tela e bloqueiam o caminho do jogador.
+
+
+Abrir protótipo e alterar fundo
+
+        1) Abra o Unity Hub e crie um projeto vazio de "Protótipo 3" em seu diretório de curso na versão unity correta.
+        
+        2) Clique para baixar o Protótipo 3 Starter Files, extrair a pasta compactada e, em seguida, importar o .unitypackage em seu projeto. 
+        
+        3) Abra a cena do Protótipo 3 e exclua a Cena da Amostra sem salvar
+        
+        4) Selecione o objeto De fundo na hierarquia e, em seguida, no  componente Sprite Renderer > Sprite, selecione a imagem _City, _Nature ou _Town
+
+Escolha e configure um personagem do jogador
+
+        1) Da Biblioteca de Curso > Personagens, Arraste um personagem para a hierarquia, renomeie-o  "Jogador", 
+           em seguida, gire-o no eixo Y para enfrentar à direita
+           
+        2) Adicione um  componente do corpo RigBody     
+        
+        3) Adicione um colisor de caixa e, em seguida, edite os limites do colisor
+        
+        4) Crie uma nova pasta "Scripts" em Ativos, crie um script "PlayerController" dentro e conecte-o ao jogador
+        
+Faça o jogador saltar no início
+
+    
+        
