@@ -570,3 +570,15 @@ Gerar obstáculos em intervalos
 
                     }
                 }
+
+Principais Conceitos e Habilidades
+
+        GetComponent
+        ForceMode.Impulse
+        Física.Gravidade
+        Restrições rígidas do corpo
+        Variáveis rigidbody
+        Booleanos
+        Multiplicar/Atribuir ("*) Operador
+        E (&&) Operador
+        OnCollisionEnter()
