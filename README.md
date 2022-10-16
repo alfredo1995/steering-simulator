@@ -403,5 +403,62 @@ Escolha e configure um personagem do jogador
         
 Faça o jogador saltar no início
 
-    
+        1) No PlayerController.cs, declare um novo playerrb rígido privado;  variável
         
+        2) Em Start(), inicialize playerRb = GetComponent<Rigidbody>();
+        
+        3) Em Start(), use o método AddForce para fazer o jogador saltar no início do jogo
+        
+                public class PlayerController : MonoBehaviour
+                {
+                    private Rigidbody PlayerRb;
+                    void Start()
+                    {
+                        PlayerRb = GetComponent<Rigidbody>();
+                        PlayerRb.AddForce(Vector3.up * 500);
+                    }
+
+Faça o jogador saltar se a barra espacial pressionar
+
+        1) Em Atualização() adicione uma instrução if-then verificando se a barra de espaço está pressionada
+        
+        2) Corte e cole o código AddForce do Start() na instrução if
+        
+        3) Adicione o  parâmetro ForceMode.Impulse à  chamada AddForce e, em seguida, reduza  o valor do multiplicador de força
+        
+                    void Update()
+                    {
+                        if (Input.GetKeyUp(KeyCode.Space))
+                        {
+                            PlayerRb.AddForce(Vector3.up * 10, ForceMode.Impulse);
+                        }
+                    }
+                }
+                
+Ajuste a força de salto e a gravidade
+
+        1) Substitua o valor codificado por uma nova  variável pública de salto flutuante
+
+        2) Adicione uma nova  variável de gravidade flutuante públicaModifier e em Start(), 
+           adicione Física.gravidade *= gravityModifier; 
+        
+        3) No inspetor, ajuste os valores de massa gravityModifier, jumpForce e Rigibody 
+        
+                public class PlayerController : MonoBehaviour
+                {
+                    public float jumpForce = 10.0f;
+                    public float gravityModifier;
+                    void Start()
+                    {
+                        PlayerRb = GetComponent<Rigidbody>();
+                        Physics.gravity *= gravityModifier;
+                    }
+
+                    void Update()
+                    {
+                        if (Input.GetKeyUp(KeyCode.Space))
+                        {
+                            PlayerRb.AddForce(Vector3.up * jumpForce, ForceMode.Impulse);
+                        }
+                    }
+                }
