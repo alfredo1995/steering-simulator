@@ -523,3 +523,50 @@ Faça um obstáculo e mova-o para a esquerda
                     }
                     
 Crie um gerenciador de desova
+
+        1) Crie um novo objeto vazio "Spawn Manager" e aplique um novo  script .cs SpawnManager a ele
+
+        2) Em SpawnManager.cs, declare um novo obstáculo público do GameObjectPrefab; , em seguida, 
+           atribua seu pré-fabricado à nova variável no inspetor
+
+        3) Declare um novo vetor3 privado spawnPos em seu local de desova
+        
+        4) In Start(), Instanciar um novo pré-fabricado de obstáculos 
+        
+        
+                public class SpawnManager : MonoBehaviour
+                {
+                    public GameObject obstaclePrefabs;
+                    private Vector3 spawnPosition = new Vector3(25, 0, 0);
+                    void Start()
+                    {
+                        Instantiate(obstaclePrefabs, spawnPosition, obstaclePrefabs.transform.rotation);
+                    }
+                    
+Gerar obstáculos em intervalos
+
+        1) Crie um novo  método de desobstaculo de vazio e, em seguida, mova a  chamada Instantiate dentro dele
+
+        2) Crie novas variáveis flutuantes para iniciarDelay e repetirRate
+
+        3) Que seus obstáculos desovam em intervalos usando o  método InvokeRepeating()
+
+        4) No componente Do corpo rígido do jogador, expanda as restrições e congele  tudo, menos a posição Y
+        
+                public class SpawnManager : MonoBehaviour
+                {
+                    public GameObject obstaclePrefabs;
+                    private Vector3 spawnPosition = new Vector3(25, 0, 0);
+                    private float startDelay = 2.0f;
+                    private float repeatRate = 2.0f;
+                    void Start()
+                    {
+                        InvokeRepeating("spawObstacle", startDelay, repeatRate);
+                    }
+
+                    void spawObstacle()
+                    {
+                        Instantiate(obstaclePrefabs, spawnPosition, obstaclePrefabs.transform.rotation);
+
+                    }
+                }
