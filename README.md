@@ -571,18 +571,6 @@ Gerar obstáculos em intervalos
                     }
                 }
 
-Principais Conceitos e Habilidades
-
-        GetComponent
-        ForceMode.Impulse
-        Física.Gravidade
-        Restrições rígidas do corpo
-        Variáveis rigidbody
-        Booleanos
-        Multiplicar/Atribuir ("*) Operador
-        E (&&) Operador
-        OnCollisionEnter()
-
 
 Crie um script para repetir o plano de fundo
     
@@ -700,3 +688,22 @@ Stop MoveLeft no gameOver
                     }
                 }
 
+
+Principais Conceitos e Habilidades
+
+        GetComponent
+        ForceMode.Impulse
+        Física.Gravidade
+        Restrições rígidas do corpo
+        Variáveis rigidbody
+        Booleanos
+        Multiplicar/Atribuir ("*) Operador
+        E (&&) Operador
+        OnCollisionEnter()
+
+        Repetir o plano de fundo
+        Obter largura collider
+        Comunicação de script
+        Igual a (==) operador
+        Tags
+        CompareTag()
