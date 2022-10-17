@@ -761,6 +761,20 @@ Configure uma animação em queda PlayerController
                         PlayerAnim.SetInteger("DeathType_int", 1);
                     }
 
+Impedir o jogador de pular inconsciente PlayController
+
+        1) Para evitar que o jogador pule inconsciente, adicione && !gameOver à condição de salto 
+        
+                void Update()
+                {
+                    if (Input.GetKeyUp(KeyCode.Space) && isOnGround && !gameOver)
+                    {
+                        PlayerRb.AddForce(Vector3.up * jumpForce, ForceMode.Impulse);
+                        isOnGround = false;
+                        PlayerAnim.SetTrigger("Jump_trig");
+                    }
+                    
+                    
 Principais Conceitos e Habilidades
 
         GetComponent
@@ -779,3 +793,10 @@ Principais Conceitos e Habilidades
         Igual a (==) operador
         Tags
         CompareTag()
+        
+        Controladores de animação
+        Estados de animação, camadas e transições
+        Parâmetros de animação
+        Programação de animação
+        SetTrigger(), SetBool(), SetInt()
+        Não (!) operador
