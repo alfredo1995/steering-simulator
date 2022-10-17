@@ -615,7 +615,32 @@ Redefinir posição de fundo
 
 Corrigir repetição de fundo com colisor
 
-Adicione um  componente collider de  caixa ao fundo
-Declare uma nova  variável de repetição de flutuação privada
-Em Start(), obtenha a largura do colisor de caixa, dividido por 2
-Incorpore a  variável repetiçãoWidth na função repetição
+        1) Adicione um  componente collider de  caixa ao fundo
+
+        2) Declare uma nova  variável de repetição de flutuação privada
+
+        3) Em Start(), obtenha a largura do colisor de caixa, dividido por 2
+
+        4) Incorpore a  variável repetiçãoWidth na função repetição
+
+                public class RepeatBackground : MonoBehaviour
+                {
+                    private Vector3 startPos;
+                    private float reapetWidth;
+                    void Start()
+                    {
+                        startPos = transform.position;
+                        reapetWidth = GetComponent<BoxCollider>().size.x / 2;
+                    }
+
+                    void Update()
+                    {
+                        if(transform.position.x < startPos.x - reapetWidth)
+                        {
+                            transform.position = startPos;
+                        }
+                    }
+                }
+
+
+Adicione um novo jogo sobre o gatilho
