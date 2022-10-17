@@ -674,3 +674,28 @@ Adicione um novo jogo sobre o gatilho
                 }
                 
 Stop MoveLeft no gameOver
+
+        1) Em MoveLeft.cs, declare um novo player privado PlayerControllerScript;
+
+        2) In Start(), inicialize-o encontrando o Jogador e recebendo o componente PlayerController
+
+        3) Enrole o método de tradução em uma verificação se o jogo não acabou
+        
+            public class MoveLeft : MonoBehaviour
+            {
+                private PlayerController playControllerScript;
+                
+                void Start()
+                {
+                    playControllerScript = GameObject.Find("Player").GetComponent<PlayerController>();
+                }
+
+                void Update()
+                {
+                    if(playControllerScript.gameObject == false)
+                    {
+                        transform.Translate(Vector3.left * Time.deltaTime * speed);
+
+                    }
+                }
+            }
