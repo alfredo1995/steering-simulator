@@ -644,3 +644,33 @@ Corrigir repetição de fundo com colisor
 
 
 Adicione um novo jogo sobre o gatilho
+
+        1) No inspetor, adicione uma tag "Ground" ao chão e uma tag "Obstáculo" ao pré-fio de obstáculo
+
+        2) No PlayerController, declare um novo jogo público boolOver;
+
+        3) Em OnCollisionEnter, adicione a instrução if-else para testar se o jogador colidiu com o "Ground" ou um "Obstáculo"
+
+        4) Se eles colidiram com o "Ground", set isOnGround = verdadeiro, e se colidirem com um "Obstáculo", definir gameOver = verdadeiro
+        
+        
+                public class PlayerController : MonoBehaviour
+                {
+                    public bool gameOver;
+                    
+                    private void OnCollisionEnter(Collision collision)
+                    {
+                        if (collision.gameObject.CompareTag("Ground"))
+                        {
+                            isOnGround = true;
+                        }
+                        else if (collision.gameObject.CompareTag("Obstacle"))
+                        {
+                            Debug.Log("Game Over");
+                            gameOver = true;
+                        }
+
+                    }
+                }
+                
+Stop MoveLeft no gameOver
