@@ -810,28 +810,35 @@ Impedir o jogador de pular inconsciente PlayController
                     }
                     
                     
-Principais Conceitos e Habilidades
+Adicione uma partícula de respingo de sujeira
 
-        GetComponent
-        ForceMode.Impulse
-        Física.Gravidade
-        Restrições rígidas do corpo
-        Variáveis rigidbody
-        Booleanos
-        Multiplicar/Atribuir ("*) Operador
-        E (&&) Operador
-        OnCollisionEnter()
+        1) Da  Biblioteca de curso > Partículas, arraste FX_DirtSplatter para o player
 
-        Repetir o plano de fundo
-        Obter largura collider
-        Comunicação de script
-        Igual a (==) operador
-        Tags
-        CompareTag()
+        2) Declarar uma nova sujeira do Sistema de Partículas públicas; , em seguida,  atribuí-lo no Inspetor
         
-        Controladores de animação
-        Estados de animação, camadas e transições
-        Parâmetros de animação
-        Programação de animação
-        SetTrigger(), SetBool(), SetInt()
-        Não (!) operador
+        3) Adicionar dirtParticle.Stop();  quando o jogador pula ou colide com um obstáculo
+        
+        4) Adicionar dirtParticle.Play();  quando o jogador pousa no chão
+        
+                public ParticleSystem dirParticle
+
+                void Update () {
+                        if (Input.GetKeyUp(KeyCode.Space) && isOnGround && !gameOver){
+                                dirtParticle.Stop();  }}
+
+                private void OnCollisionEnter(collision collision other){
+                        if (collision.gameObject.CompareTag("Ground")){
+
+                         dirParticle.Play();
+
+                        else if (collision.gameObject.CompareTag("Obstacle"))
+                                            dirtParticle.Stop();  }}
+
+    
+  Adicione música ao objeto da câmera
+  
+  Selecione o  objeto da câmera principal  e, em seguida, adicione componente > fonte de áudio
+Da Biblioteca de Curso > Sound, arraste um clipe de música para a  variável AudioClip no inspetor
+Reduza o volume para que seja mais fácil ouvir efeitos sonoros
+Verifique a  caixa de seleção Loop
+        
