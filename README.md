@@ -843,3 +843,44 @@ Adicione uma partícula de respingo de sujeira
         
         3) Reduza o volume para que seja mais fácil ouvir efeitos sonoros
         
+Declare variáveis para clipes de áudio
+
+        1) No PlayerController.cs, declare um novo vídeo público do AudioClip;  e um novo áudioclip público crashSound;
+
+        2) Na Biblioteca de Curso > Som, arraste um clipe para cada nova  variável de som no inspetor
+        
+Reproduzir clipes de áudio no salto e acidente
+
+        1) Adicione um  componente de fonte de áudio ao player
+        
+        2) Declare um novo player audiosource privadoAudio;  e inicializá-lo como playerAudio = GetComponent<AudioSource>();
+
+        3) Ligue para o playerAudio.PlayOneShot(jumpSound, 1.0f);  quando o personagem pula
+
+        4) Ligue para o playerAudio.PlayOneShot(crashSound, 1.0f);  quando o personagem trava
+        
+        
+                public class PlayerController : MonoBehaviour
+                {
+                    private AudioSource PlayerAudio;
+
+                    void Start()
+                    {
+                        PlayerAudio = GetComponent<AudioSource>();
+                    }
+
+                    void Update()
+                    {
+                        if (Input.GetKeyUp(KeyCode.Space) && isOnGround && !gameOver)
+                        {
+                            PlayerAudio.PlayOneShot(jumpSound, 1.0f);
+                        }
+                    }
+
+                    private void OnCollisionEnter(Collision collision)
+                    {
+                        else if (collision.gameObject.CompareTag("Obstacle"))
+                        {
+                            gameOver = true;
+                            PlayerAudio.PlayOneShot(crashSound, 1.0f);
+                        }
