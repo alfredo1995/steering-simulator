@@ -367,7 +367,16 @@ Exclua o código q estava caluclundo o angulo com turnSpeed > transform.Translat
 Inicialize variáveis com valores no PlayerController > public float turnSpeed = 50.0f;
     
     
-    
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
     
     
     
@@ -377,8 +386,34 @@ Inicialize variáveis com valores no PlayerController > public float turnSpeed =
 
 
 
-O caráter, o plano de fundo e o obstáculo de sua escolha serão configurados. O jogador será capaz de pressionar a barra espacial e fazer o personagem saltar, à medida que os obstáculos desovam na borda da tela e bloqueiam o caminho do jogador.
+programando um jogo de corredor de rolagem lateral sem fim em ritmo acelerado ou jogo runner(corrida infininta), onde o jogador precisa de saltar sobre obstáculos que se aproximam para evitar bater. 
 
+
+Principais Conceitos e Habilidades
+
+        GetComponent
+        ForceMode.Impulse
+        Física.Gravidade
+        Restrições rígidas do corpo
+        Variáveis rigidbody
+        Booleanos
+        Multiplicar/Atribuir ("*) Operador
+        E (&&) Operador
+        OnCollisionEnter()
+
+        Repetir o plano de fundo
+        Obter largura collider
+        Comunicação de script
+        Igual a (==) operador
+        Tags
+        CompareTag()
+        
+        Controladores de animação
+        Estados de animação, camadas e transições
+        Parâmetros de animação
+        Programação de animação
+        SetTrigger(), SetBool(), SetInt()
+        Não (!) operador
 
 Abrir protótipo e alterar fundo
 
