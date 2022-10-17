@@ -414,6 +414,12 @@ Principais Conceitos e Habilidades
         Programação de animação
         SetTrigger(), SetBool(), SetInt()
         Não (!) operador
+        
+        Sistemas de partículas 
+        Posicionamento do objeto infantil
+        Clipes de áudio e fontes de áudio 
+        Reproduzir e parar os efeitos sonoros
+<br>
 
 Abrir protótipo e alterar fundo
 
@@ -606,6 +612,21 @@ Gerar obstáculos em intervalos
                     }
                 }
 
+<br>
+
+Principais Conceitos e Habilidades modulo 1
+
+        GetComponent
+        ForceMode.Impulse
+        Física.Gravidade
+        Restrições rígidas do corpo
+        Variáveis rigidbody
+        Booleanos
+        Multiplicar/Atribuir ("*) Operador
+        E (&&) Operador
+        OnCollisionEnter()
+        
+<br>
 
 Crie um script para repetir o plano de fundo
     
@@ -722,7 +743,20 @@ Stop MoveLeft no gameOver
                         }
                     }
                 }
-                
+     
+ <br>    
+ 
+Conceitos desse modulo 2
+ 
+        Repetir o plano de fundo
+        Obter largura collider
+        Comunicação de script
+        Igual a (==) operador
+        Tags
+        CompareTag()
+        
+ <br>       
+ 
 Explore as animações do jogador
 
         Clique duas vezes no Controlador de Animação do Jogador e, em seguida, 
@@ -809,7 +843,19 @@ Impedir o jogador de pular inconsciente PlayController
                         PlayerAnim.SetTrigger("Jump_trig");
                     }
                     
-                    
+<br>
+
+Conceitos de modulo 3
+
+        Controladores de animação
+        Estados de animação, camadas e transições
+        Parâmetros de animação
+        Programação de animação
+        SetTrigger(), SetBool(), SetInt()
+        Não (!) operador
+        
+ <br>
+ 
 Adicione uma partícula de respingo de sujeira
 
         1) Da  Biblioteca de curso > Partículas, arraste FX_DirtSplatter para o player
@@ -835,7 +881,7 @@ Adicione uma partícula de respingo de sujeira
                                             dirtParticle.Stop();  }}
 
     
-  Adicione música ao objeto da câmera
+Adicione música ao objeto da câmera
   
         1) Selecione o  objeto da câmera principal  e, em seguida, adicione componente > áudio source
         
@@ -884,3 +930,11 @@ Reproduzir clipes de áudio no salto e acidente
                             gameOver = true;
                             PlayerAudio.PlayOneShot(crashSound, 1.0f);
                         }
+
+
+Novos Conceitos e Habilidades modulo 4
+
+        Sistemas de partículas 
+        Posicionamento do objeto infantil
+        Clipes de áudio e fontes de áudio 
+        Reproduzir e parar os efeitos sonoros
