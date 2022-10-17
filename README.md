@@ -651,12 +651,11 @@ Adicione um novo jogo sobre o gatilho
 
         3) Em OnCollisionEnter, adicione a instrução if-else para testar se o jogador colidiu com o "Ground" ou um "Obstáculo"
 
-        4) Se eles colidiram com o "Ground", set isOnGround = verdadeiro, e se colidirem com um "Obstáculo", definir gameOver = verdadeiro
-        
+        4) Se eles colidiram com o "Ground", set isOnGround = verdadeiro, e se colidirem com um "Obstáculo", definir gameOver = verdadeiro        
         
                 public class PlayerController : MonoBehaviour
                 {
-                    public bool gameOver;
+                    public bool gameOver = false;
                     
                     private void OnCollisionEnter(Collision collision)
                     {
@@ -666,8 +665,8 @@ Adicione um novo jogo sobre o gatilho
                         }
                         else if (collision.gameObject.CompareTag("Obstacle"))
                         {
-                            Debug.Log("Game Over");
                             gameOver = true;
+                            Debug.Log("Game Over");
                         }
 
                     }
@@ -681,21 +680,23 @@ Stop MoveLeft no gameOver
 
         3) Enrole o método de tradução em uma verificação se o jogo não acabou
         
-            public class MoveLeft : MonoBehaviour
-            {
-                private PlayerController playControllerScript;
-                
-                void Start()
+                public class MoveLeft : MonoBehaviour
                 {
-                    playControllerScript = GameObject.Find("Player").GetComponent<PlayerController>();
-                }
-
-                void Update()
-                {
-                    if(playControllerScript.gameObject == false)
+                    private float speed = 10.0f;
+                    private PlayerController playControllerScript;
+                    
+                    void Start()
                     {
-                        transform.Translate(Vector3.left * Time.deltaTime * speed);
+                        playControllerScript = GameObject.Find("Player").GetComponent<PlayerController>();
+                    }
 
+                    void Update()
+                    {
+                        if(playControllerScript.gameOver == false)
+                        {
+                            transform.Translate(Vector3.left * Time.deltaTime * speed);
+
+                        }
                     }
                 }
-            }
+
