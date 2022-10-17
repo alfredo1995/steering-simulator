@@ -687,6 +687,13 @@ Stop MoveLeft no gameOver
                         }
                     }
                 }
+                
+Explore as animações do jogador
+
+        Clique duas vezes no Controlador de Animação do Jogador e, em seguida, 
+        explore as diferentes camadas, clicando duas vezes em Estados para ver suas animações 
+        e transições para ver suas condições
+
 
 Faça o jogador começar em uma corrida
 
@@ -736,13 +743,23 @@ Ajuste a animação de salto
         2) Ajuste a massa do jogador, a força de salto e  o modificador de gravidade para acertar o seu salto
         
         3) player > rigbody > mass > 60, jump force 700, Gravity Modified 1.5;
+        
 
+Configure uma animação em queda PlayerController
 
+        1) Na condição de que o jogador colide com Obstáculo, definir a morte bool para a verdade
+        
+        2) Na mesma declaração se, defina o inteiro DeathType para 1 
 
-
-
-
-
+                private void OnCollisionEnter(Collision collision)
+                {
+                    else if (collision.gameObject.CompareTag("Obstacle"))
+                    {
+                        gameOver = true;
+                        Debug.Log("Game Over");
+                        PlayerAnim.SetBool("Death_b", true);
+                        PlayerAnim.SetInteger("DeathType_int", 1);
+                    }
 
 Principais Conceitos e Habilidades
 
