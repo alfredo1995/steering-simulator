@@ -688,6 +688,61 @@ Stop MoveLeft no gameOver
                     }
                 }
 
+Faça o jogador começar em uma corrida
+
+        1) Na guia Parâmetros, altere a  variável Speed_f para 1.0
+
+        2) Clique com o botão direito do mouse no Run_Static > Set como Estado padrão da camada
+
+        3) Clique em um único o estado Run_Static e ajuste o  valor de velocidade no inspetor para corresponder à velocidade do fundo
+
+
+Configure uma animação de salto
+
+        1) No PlayerController.cs, declare um novo jogador privado de AnimatorAnim; 
+        
+        2) In Start(), set playerAnim = GetComponent<Animator>();
+
+        3) Na declaração if para quando o jogador saltar, acione o salto: playerAnim. SetTrigger ("Jump_trig");
+        
+        
+                public class PlayerController : MonoBehaviour
+                {
+                    private Rigidbody PlayerRb;
+                    private Animator PlayerAnim;
+
+                    void Start()
+                    {
+                        PlayerRb = GetComponent<Rigidbody>();
+                        PlayerAnim = GetComponent<Animator>();
+                    }
+
+                    void Update()
+                    {
+                        if (Input.GetKeyUp(KeyCode.Space) && isOnGround)
+                        {
+                            PlayerRb.AddForce(Vector3.up * jumpForce, ForceMode.Impulse);
+                            isOnGround = false;
+                            PlayerAnim.SetTrigger("Jump_trig");
+                        }
+                    }
+
+
+
+Ajuste a animação de salto
+
+        1) Na janela animador, clique no estado Running_Jump, depois no inspetor e reduza seu valor de velocidade para 0.7
+
+        2) Ajuste a massa do jogador, a força de salto e  o modificador de gravidade para acertar o seu salto
+        
+        3) player > rigbody > mass > 60, jump force 700, Gravity Modified 1.5;
+
+
+
+
+
+
+
 
 Principais Conceitos e Habilidades
 
