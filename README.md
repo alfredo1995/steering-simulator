@@ -582,3 +582,40 @@ Principais Conceitos e Habilidades
         Multiplicar/Atribuir ("*) Operador
         E (&&) Operador
         OnCollisionEnter()
+
+
+Crie um script para repetir o plano de fundo
+    
+        Crie um novo script chamado RepeatBackground.cs e conecte-o ao objeto de fundo
+        
+Redefinir posição de fundo
+
+        1) Declarar uma nova variável private Vector3 startPos;
+
+        2) Em Start(), defina a  variável startPos à sua posição inicial real atribuindo-a  = transform.position;
+
+        3) Em Update(), escreva uma posição if-statement para redefinir se ela mover uma certa distância
+
+                public class RepeatBackground : MonoBehaviour
+                {
+                    private Vector3 startPos;
+                    void Start()
+                    {
+                        startPos = transform.position;
+                    }
+
+                    void Update()
+                    {
+                        if(transform.position.x < startPos.x -50)
+                        {
+                            transform.position = startPos;
+                        }
+                    }
+                }
+
+Corrigir repetição de fundo com colisor
+
+Adicione um  componente collider de  caixa ao fundo
+Declare uma nova  variável de repetição de flutuação privada
+Em Start(), obtenha a largura do colisor de caixa, dividido por 2
+Incorpore a  variável repetiçãoWidth na função repetição
