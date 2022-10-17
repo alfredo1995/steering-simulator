@@ -837,8 +837,9 @@ Adicione uma partícula de respingo de sujeira
     
   Adicione música ao objeto da câmera
   
-  Selecione o  objeto da câmera principal  e, em seguida, adicione componente > fonte de áudio
-Da Biblioteca de Curso > Sound, arraste um clipe de música para a  variável AudioClip no inspetor
-Reduza o volume para que seja mais fácil ouvir efeitos sonoros
-Verifique a  caixa de seleção Loop
+        1) Selecione o  objeto da câmera principal  e, em seguida, adicione componente > áudio source
+        
+        2) Na Biblioteca de Curso > Sound, arraste um clipe de música para a  variável AudioClip no inspetor
+        
+        3) Reduza o volume para que seja mais fácil ouvir efeitos sonoros
         
