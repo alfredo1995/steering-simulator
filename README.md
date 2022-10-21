@@ -13,7 +13,7 @@ Aprendendo os fundamentos para criação de Jogo em C# na unity através da plat
     Acessando o cmponente Rotate, p/ girar o veiculo;
 
 
-Primeiro passo, faça o downloado do prototype 1 
+Primeiro passo, faça o downloado do prototype 1  
 
     https://connect-prd-cdn.unity.com/20210923/c709e76b-3e93-4140-8675-f694b9f04399/Prototype%201%20-%20Starter%20Files.zip
     
