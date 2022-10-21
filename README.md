@@ -38,7 +38,7 @@ Protótipo 1
 
     4) Assets > Scenes > seleecione a cena > prototype 1;
   
-
+ 
 Adicione seu veículo à cena
 
     1) Na Janela do Projeto, abra os ativos > Biblioteca de Cursos > Veículos e arraste um veículo para a Hierarquia;      
